@@ -1,0 +1,118 @@
+/* Dashboard */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.dashboard-stats {
+  background: #020617;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.dashboard-stats p {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #020617;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Expense Form */
+.expense-form {
+  background: #020617;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.expense-form form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.expense-form input,
+.expense-form select {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+  color: #e5e7eb;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.expense-form button {
+  grid-column: 1 / -1;
+  background: linear-gradient(to right, #22c55e, #16a34a);
+  color: #022c22;
+  font-weight: 600;
+}
+
+/* Expense List */
+.expense-list {
+  background: #020617;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.expense-list ul {
+  list-style: none;
+}
+
+.expense-list li {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #1e293b;
+}
+
+.expense-list li:last-child {
+  border-bottom: none;
+}
+
+.expense-list button:first-of-type {
+  background: #38bdf8;
+  color: #020617;
+}
+
+.expense-list button:last-of-type {
+  background: #ef4444;
+  color: #020617;
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .expense-list li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
